@@ -1,0 +1,38 @@
+[
+  {
+    "taskName": "Comprar",
+    "taskCategory": "Casa",
+    "taskDueDate": "2026-12-20",
+    "taskPriority": "mitja",
+    "taskImportant": true,
+    "taskDescription": "Comprar verdura, pa i fruita",
+    "done": false
+  },
+  {
+    "taskName": "Estudiar",
+    "taskCategory": "Estudis",
+    "taskDueDate": "2026-02-2",
+    "taskPriority": "alta",
+    "taskImportant": true,
+    "taskDescription": "Repassar Javascript",
+    "done": false
+  },
+  {
+    "taskName": "Jugar a futbol",
+    "taskCategory": "Personal",
+    "taskDueDate": "2026-06-6",
+    "taskPriority": "baixa",
+    "taskImportant": false,
+    "taskDescription": "Jugar a futbol amb els amics",
+    "done": false
+  },
+  {
+    "taskName": "Enviar correu al treball",
+    "taskCategory": "Feina",
+    "taskDueDate": "2026-03-18",
+    "taskPriority": "baixa",
+    "taskImportant": false,
+    "taskDescription": "Confirmar la reunio de la setmana vinent",
+    "done": true
+  }
+]
