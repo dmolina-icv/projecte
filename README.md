@@ -1,6 +1,6 @@
 # Projecte React – Desplegament d'aplicacions web
 
-## Descripció del projecte
+## Descripció del projecte Daniel
 
 Projecte del Tema2 fet amb React dockeritzat.
 
