@@ -1,84 +1,76 @@
-# Gestor de Tasques
+# Projecte React – Desplegament d'aplicacions web
 
-## 1. Descripció de l'aplicació
+## Descripció del projecte
 
-Aquesta aplicació permet gestionar tasques de manera senzilla i visual. La aplicació fa:
+Projecte del Tema2 fet amb React dockeritzat.
 
-- Afegir noves tasques
-- Marcar tasques com a fetes
-- Eliminar tasques
-- Carregar dades de prova
-- Veure un llistat de totes les tasques amb la seva informació
+L’objectiu és convertir un projecte funcional en un projecte:
 
----
+- Col·laboratiu
+- Versionat correctament
+- Dockeritzat
+- Reproduïble amb una sola comanda
 
-## 2. Captura del resultat final
 
-![Captura1](./img/Captura1.png)
-![Captura2](./img/Captura2.png)
+## Arquitectura del projecte
 
----
+L’aplicació està formada per:
 
-## 3. Explicació breu de com executar el projecte
+- Frontend React
+- Build de producció generat amb Node
+- Servidor Nginx per servir fitxers estàtics
+- Docker multi-stage per optimitzar la imatge final
 
-**1. Entrar a la carpeta del projecte:**
+Flux d’execució amb Docker:
 
-cd ProjecteT2
+1. Node instal·la dependències
+2. Es genera el build de producció
+3. Nginx serveix els fitxers estàtics al port 80
+4. Docker publica el servei al port 5173 (host)
 
-**2. Instal·lar les dependències:**
 
+## Requisits
+
+Per executar el projecte cal tenir instal·lat:
+
+- Node.js (si s’executa en local)
+- Docker
+- Docker Compose
+
+
+## Execució local (sense Docker)
+
+Instal·lar dependències:
 npm install
 
-**3. Arrencar el projecte:**
-
+Executar:
 npm run dev
 
-**4. Entar a la url:**
-
+Accedir a:
 http://localhost:5173
 
----
 
-## 4. Funcionalitats implementades
+## Execució amb Docker
 
-- Formulari amb els camps:
-- Nom de la tasca
-- Categoria
-- Data límit
-- Prioritat
-- Important (checkbox)
-- Descripció
+Construir i executar:
+docker compose up --build
 
-- Validació de formulari amb React Hook Form + Zod
-- Llistat de tasques amb tota la informació
-- Marcar tasques com a fetes/desfer
-- Eliminar tasques amb un link vermell
-- Carregar dades de prova seedTasks.json amb un botó
-- Components reutilitzables (Input, Select, Checkbox...)
+Accedir a:
+http://localhost:5173
 
----
+Per aturar el servei:
+docker compose down
 
-## 5. Recursos utilitzats
 
-- [React](https://reactjs.org/) – Framework principal
-- [Vite](https://vitejs.dev/) – Eina de bundling i desenvolupament ràpid
-- [Bootstrap](https://getbootstrap.com/) – Estil visual
-- [React Hook Form](https://react-hook-form.com/) – Gestió de formularis
-- [Zod](https://zod.dev/) – Validació de formularis
-- JSON per a dades de prova (seedTasks.json)
+## Troubleshooting bàsic
 
----
+Si hi ha errors amb el build:
+docker compose down
+docker compose up --build --no-cache
 
-## 6. Passos seguits per la implementació
+Si el port està ocupat:
+- Canviar el port al fitxer `docker-compose.yml`
 
-1. Creació del projecte amb Vite + React + JavaScript  
-2. Instal·lació de Bootstrap, React Hook Form i Zod  
-3. Creació dels components del formulari
-4. Creació del component principal TaskForm.jsx amb validació  
-5. Creació del llistat de tasques TaskList.jsx  
-6. Separació de cada fila de tasca a TaskItem.jsx  
-7. Implementació de funcionalitat marcar/desmarcar tasques com a fetes i eliminar tasques
-8. Creació del fitxer seedTasks.json i botó per carregar dades de prova  
-9. Pagina amb estils de Bootstrap
-
----
+Si hi ha problemes amb dependències:
+- Esborrar `node_modules`
+- Tornar a executar `npm install`
