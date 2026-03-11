@@ -57,13 +57,14 @@ Inicialment el projecte:
 
 L’estructura bàsica era la típica d’un projecte React:
 
-projecte/
-│
-├── src/
-├── public/
-├── package.json
-├── package-lock.json
-└── README.md
+
+projecte/----
+
+src/
+public/
+package.json
+package-lock.json
+README.md
 
 
 ## Problemes detectats
@@ -170,7 +171,7 @@ Text modificat per Adrià
 
 Text modificat per Daniel
 
-                            feature/conflicte-1-daniel
+feature/conflicte-1-daniel
 
 
 ---
@@ -235,7 +236,7 @@ Al fitxer apareixien els marcadors:
 
 "conflicte-test": "2.0.0",
 
-                            feature/conflicte-2-daniel
+feature/conflicte-2-daniel
 
 
 Es va decidir mantenir la versió final més recent.
@@ -343,7 +344,7 @@ port 3000
 - creació de branques
 - generació del conflicte 1
 - dockerització
-- Report
+- Readme
 
 **Daniel Molina**
 
