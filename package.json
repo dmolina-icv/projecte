@@ -19,6 +19,7 @@
     "react-hook-form": "^7.68.0",
     "zod": "^4.2.0"
 "conflicte-test": "2.0.0",
+    "conflicte-test": "1.0.0",
   },
   "devDependencies": {
     "@eslint/js": "^9.39.1",
