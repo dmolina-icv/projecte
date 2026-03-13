@@ -1,6 +1,6 @@
 # Projecte React – Desplegament d'aplicacions web
 
-## Descripció del projecte Adria
+## Descripció del projecte Daniel i Adria
 
 Projecte del Tema2 fet amb React dockeritzat.
 
