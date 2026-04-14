@@ -329,7 +329,7 @@ docker compose up --build
 
 Obrir el navegador a:
 
-http://localhost:3000
+http://localhost:5173
 
 
 ## Ports utilitzats
